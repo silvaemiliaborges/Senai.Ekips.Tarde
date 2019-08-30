@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.Ekips.WebApi.Domains;
@@ -15,7 +16,7 @@ namespace Senai.Ekips.WebApi.Controllers
     public class FuncionariosController : ControllerBase
     {
         FuncionarioRepository funcionarioRepository = new FuncionarioRepository();
-
+        //[Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -37,7 +38,7 @@ namespace Senai.Ekips.WebApi.Controllers
             }
         }
 
-
+        //[Authorize(Roles = "ADMIN")]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {

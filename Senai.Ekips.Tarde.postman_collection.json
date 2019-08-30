@@ -76,6 +76,298 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET / API / DEPARTAMENTO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/departamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET / API / DEPARTAMENTO / {ID}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"departamento1\": \"CONTAS A PAGAR\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/departamento/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"departamento",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST / API / DEPARTAMENTO ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"departamento1\": \"CONTAS A PAGAR\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/departamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/api/cargo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/cargo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cargo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/api/cargo/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/cargo/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cargo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/api/cargo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cargo1\": \"professor\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/cargo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cargo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/api/cargo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"idcargo\": 5,\r\n        \"cargo1\": \"professora\",\r\n        \"funcionario\": []\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/cargo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cargo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/api/funcionarios",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idfuncionario\": 2,\r\n        \"nome\": \"MELE\",\r\n        \"cpf\": 12347,\r\n        \"datanascimento\": \"1990-12-01T00:00:00\",\r\n        \"salario\": 989,\r\n        \"iddepartamento\": 2,\r\n        \"idcargo\": 2,\r\n        \"idusuariovinculado\": 3\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get/api/UsuariosVinculados",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5001/api/UsuariosVinculados",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"UsuariosVinculados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/api/UsuariosVinculados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"MARI_GADA@GMAIL.COM\",\n\t\"senha\" : \"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5001/api/UsuariosVinculados",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"UsuariosVinculados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/api/funcionarios",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

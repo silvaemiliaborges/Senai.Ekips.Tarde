@@ -15,5 +15,7 @@ namespace Senai.Ekips.WebApi.Domains
         
 
         public ICollection<Funcionario> Funcionario { get; set; }
+
+        //public Funcionario IdFunconarioNavigation { get; set; }
     }
 }
